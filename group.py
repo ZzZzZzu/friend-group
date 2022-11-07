@@ -37,3 +37,20 @@ my_group = {
 print (f"Nash is {my_group['Nash']['age']}")
 print(",".join(my_group.keys()))
 print(f"{my_group['Jill']['relations']}")
+
+
+
+def average_age()
+    age = 0
+     for person in my_group:
+         age += person["age"]
+     return age / len(my_group)
+
+def add_person(name, age, job, relations):
+     my_group.append({"name":name, "age":age, "job":job, "relations":relations})
+     return my_group
+
+def forget(person1, person2):
+     my_group[person1]["relations"][person2] = ""
+     my_group[person2]["relations"][person1] = ""
+     return my_group
