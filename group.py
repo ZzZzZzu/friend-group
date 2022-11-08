@@ -47,10 +47,11 @@ def average_age():
     return age / len(my_group)
 
 def add_person(name, age, job, relations):
-     my_group.append({"name":name, "age":age, "job":job, "relations":relations})
-     return my_group
+    my_group.append({"name":name, "age":age, "job":job, "relations":relations})
+    return my_group
 
 def forget(person1, person2):
+<<<<<<< HEAD
      my_group[person1]["relations"][person2] = ""
      my_group[person2]["relations"][person1] = ""
      return my_group
@@ -67,3 +68,8 @@ print(max(person["age"] for person in my_group.values()))  # 34
 print(mean([len(person["relations"]) for person in my_group.values()]))  # 1.5
 print(max(person["age"] for person in my_group.values() if person["relations"]))  # 34
 print(max(person["age"] for person in my_group.values() if "friend" in person["relations"].values()))  # 28
+=======
+    my_group[person1]["relations"][person2] = ""
+    my_group[person2]["relations"][person1] = ""
+    return my_group
+>>>>>>> bfa5d41ec464f9552b49144888490474477306ea
